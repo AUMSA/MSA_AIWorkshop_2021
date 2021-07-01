@@ -1,233 +1,33 @@
-# How to create your own Resume Bot
+# MSA 2021 - Artificial Intelligence with Azure
 
-Please Note to use your **student account** for the rest of the process as you will need credits to increase the limitations.
+## How to create your own Resume Bot
 
-### Get Free Credits
+Please Note to use your **Student Account** for the rest of the process as you will need credits to increase the limitations.
+
+### To Get Free Credits
    Signup for [Azure Students Credits](https://azure.microsoft.com/en-au/free/students/) as this project will require a few credits.
 
    You can signup here [https://azure.microsoft.com/en-au/free/students/](https://azure.microsoft.com/en-au/free/students/)
 
+### Steps to make your Resume Bot
 
-### Create a QnAMaker Cognitive Service
-   
-- Login to [Azure Portal](https://portal.azure.com/)
+Click on the links to see in-depth steps.
 
-- Click on Create a Resource
-     ![Create a Resource](readme_images/create.png)
-
-- Search for `QnA Maker`
-     ![QnA Maker](readme_images/qna_marketplace.png)
-
-- Click on `Create`
-     ![Click Create](readme_images/QnAMaker.png)
-
-- ##### Configuring your Cognitive Service
-   ###### Project Details
-   - Select your subscription (it will be Azure for Students if you are using your student account)
-     ![Subscription](readme_images/subs.png)
-
-   - In Resource Group click on `Create new` and Enter the name of your service in this case the name is **`resume_bot`**
-     ![Resource Group](readme_images/resource.png)
-
-   - Select `Australia East` in Region (any other location would also work)
-     ![Region](readme_images/location.png)
-
-   - Type in the name you want for the service and 
-     Select `Free F0` in Pricing tier
-     ![Name and Price](readme_images/name_price.png)
-
-  ###### Azure Search details - for data
-
-   - Select `Australia East` in Azure Search Location and 
-     Select `Free F3` in Azure Search Pricing Tier
-     ![](readme_images/data.png)
-
-  ###### App Service details - for runtime
-
-   - Enter you App name (e.g. `resume-bot-service`) and 
-     Select `Australia East` in Website Location
-     ![](readme_images/runtime.png)
+- [Creating a QnA Service](1.\ Create\ QnA\ Service.md)
+  > We will learn how to Create a QnA Cognitive Service on the Azure Portal
+- [Creating a Knowledge Base](2.\ Create\ a\ Knowledge\ Base.md)
+  > Creating the knowledge base for our requirement
+- [Testing the QnA API](3.\ Test\ QnA\ API.md)
+  > Testing the QnA API using Python
+- [Creating own Application](4.\ Creating\ own\ Application.md)
+  > Building a Flask application and a little bit of Web development
+- [Deploying App on Azure](5.\ Deploying\ on\ Azure\ App\ Service.md)
+  > Using Azure App Service to host our Flask application
 
 
-  ###### App insights details - for telemetry and chat logs
-   - Disable App insights
-     ![](readme_images/disable_insights.png)
+<!-- Footers -->
+![MSA 2021](https://img.shields.io/static/v1?style=for-the-badge&label=Made%20For&message=Microsoft%20Student%20Accelerator%20-%20Australia&color=blueviolet&logo=data:image/jpeg;base64,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zWuqRx6cCVje9XzC2OPl4zge5xXdrovieVALnxUEz1FtYop/Nia8WdFQlZyX4nM42drnTU1nRF3OwUepOK5aXwP9q5vPEmvTZ6gXQRT+CqKg/wCFYeGpDm5iu7k+s105/kRU8sOsvwCy7m9deJNDsiRc6vYxEdmuFB/LNcL44+Jmlro9xp2i3H2q6uEMbSoCEjU8E5PU46Yrpovh14ThGF0aFv8Afdm/ma8t+KHhHT/Dd5Z3OmgxQXe4GAkkIy45GecHPSunDwoyqJalwUWzgKKKK9g6AooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD3L4e+OdDHhm0069vIbK6tV8srM21XGeGBPFdY/jHw3GuW13T8e1wp/ka8f+FmhaJrWqXn9rrHK8SKYIJHwGznJx3xgfnXtEGkaHYY8jT7C3x3WJF/pXjYmFONRrU5pqKZTTxnoUv/HvdyXJ9La3kl/9BU0P4nZv+PbQtYn9D9mEY/8AHytbwC4G0DHtQzKiFmIVVGST0ArmvHsRoc1LrPieVT9k8LCMno11eoMfguf515B8Rx4mk1WCfxFBFErKVt1gbMYHcDnOemc+1dxq/wAZdPtLqaDT9PkvAhKiZpAiMfUcEkV5f4n8Vaj4qvluL5lVIwRFDHwqA/zPvXo4WlOMuZxSRtTi072MOiiivRNgooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigABIOQcGlZixyxJPuaSigDpNF8eeItBhEFpfl4B0inXeq/TPI/A1LrXxC8Ra7ZNZ3N2kdu/DpAmzePQnrj2rlqKz9jTvzWVxcqvewUUUVoMKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA//Z)
 
-   - Click on `Review + Create`
-     ![](readme_images/review_create.png)
+![Azure](https://img.shields.io/static/v1?style=for-the-badge&logo=Microsoft-azure&label=Hosted%20On&message=Microsoft%20Azure&color=blue)
 
-   - Verify all the contents is correct and Click on **Create** on the bottom of the screen
-     ![](readme_images/verify.png)
-   
-   - Wait for the deployment to complete
-     ![](readme_images/qnares_dep.png)
-
-### QnA maker
-   - Log into [QnA Maker](https://www.qnamaker.ai/)
-     Link: [https://www.qnamaker.ai/](https://www.qnamaker.ai/)
-
-   - Select **Create Knowledge Base**
-     ![](readme_images/create_kb.png)
-    OR
-     Visit Link: [https://www.qnamaker.ai/Create](https://www.qnamaker.ai/Create)
-
-
-### Creating a Knowledge Base
-  
-   - You can skip step 1 as we have covered it Above in **Create a QnAMaker Cognitive Service**
-     ![](readme_images/step1_skip.png)
-
-   - Select your University Name in Microsoft Azure Directory ID
-
-   - Select `Azure for Students` in Azure subscription name
-
-   - Select the name of the Service (in this case `resume-bot-service`)
-
-   - Select `English` in Language
-   
-   - The final output of Step 2 would be 
-   ![](readme_images/step2_kb.png)
-
-   - Enter the Name of the Knowledge Base
-   ![](readme_images/kb_name.png)
-
-   - Populating your Knowledge Base.
-        - You can download the [`.docx` Click Here](resume_qna.docx)
-
-        - Open it on your device and add more question and answers then save the file.
-        ![](readme_images/add_question_answers.png)
-
-        - Upload the file in Step 4 or Add a link to your uploaded file (e.g. when using Azure Blob Storage or any other service)
-        ![](readme_images/add_file.png)
-
-   - Optional To add chit chat features
-    ![](readme_images/extra-chit-chat.png)
-
-   - Click on Create Knowledge Base
-    ![](readme_images/create_kb_final.png)
-  
-  - On creation of the Knowledge Base you can add more Key Pair questions else you can Save your Knowledge base by clicking on the **Save and Train** button and Click on **Publish**.
-   ![](readme_images/after_kb.png)
-
-  - Confirm to publish
-    ![](readme_images/before_publish.png)
-
-  - You will have your endpoints displayed like this:
-    ![](readme_images/keys_kb.png)
-    Click on **Curl**
-  
-  - Click on **Curl**
-  - Copy the **URL** and **End Point keys**
-    ![](readme_images/kb_key_copy.png)
-
-### Testing your API
-
-  - Install Python 3.x you can follow the [guid here](https://docs.python.org/3/using/windows.html)
-
-  - Start python inOpen your command prompt / terminal and type
-    ```
-    python
-    ```
-  
-  - First we will import the packages required for this
-    ```
-    import requests
-    import json
-    ```
-  
-  - Save the copied **URL** and **End Point key** in a variable `url` and `end_point`
-    ```
-    url = '<your-url>'
-    end_point = '<your-endpoint>'
-    ```
-
-  - Lets create a header, you can check a [list of headers here](https://docs.microsoft.com/en-us/partner/develop/headers)
-
-    ```
-    headers = {
-	    'Authorization': 'EndpointKey ' + str(end_point).strip(),
-	    'Content-type': 'application/json',
-      }
-    ```
-  
-  - Add your question
-    ```
-    text = "Where do you live ?"
-    ```
-  
-  - Let us convert the text into the format that the API requires 
-    ```
-    data = """{'question':'"""+text+"""'}"""
-    ```
-
-  - Now we will send a request to the service
-    ```
-    response = requests.post(
-                  str(url).strip(), 
-                  headers=headers, data=data
-                )
-    ```
-  
-  - Let us view the response by typing
-    ```
-    response.text
-    ```
-    The Output would be something like this: 
-    ```
-    '{
-      "answers":[{
-        "questions":["Where do you live"],
-        "answer":"I live in melbourne",
-        "score":100.0,
-        "id":3,
-        "source":"your_file",
-        "isDocumentText":false,
-        "metadata":[],
-        "context":{
-          "isContextOnly":false,
-          "prompts":[]
-        }
-      }],
-      "activeLearningEnabled":false
-    }'
-    ```
-  
-  - Since we only need the `"I live in melbourne"` part we have to 
-    - Convert the string to a `JSON` [Click here to learn more](https://techcommunity.microsoft.com/t5/microsoft-365-pnp-blog/introduction-to-json/ba-p/2049369)
-      ```
-      information = json.loads(response.text)
-      ```
-    - Now we select the required key as in a dictionary in python
-      ```
-      information['answers'][0]['answer']
-      ```
-    - The output would be something like this:
-      ```
-      'I live in melbourne'
-      ```
-
-  - We can convert the whole process into a function:
-    ```
-    def ask(url, end_point, text):
-      headers = {
-          'Authorization': 'EndpointKey ' + str(end_point).strip(),
-          'Content-type': 'application/json',
-      }
-
-      data = """{'question':'"""+text+"""'}"""
-
-      response = requests.post(
-                          str(url).strip(), 
-                          headers=headers, 
-                          data=data
-                        )
-
-      information = json.loads(response.text)
-      return information['answers'][0]['answer']
-    ```
-  
-  - Lets check if the function works:
-    ```
-    ask("your-url", "your-endpoint", "Where do you live")
-    >> 'I live in melbourne'
-    ```
+![Python](https://img.shields.io/static/v1?style=for-the-badge&logo=python&label=Python&message=3.7&color=success)
