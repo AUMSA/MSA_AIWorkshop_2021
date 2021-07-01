@@ -13,15 +13,15 @@ Please Note to use your **Student Account** for the rest of the process as you w
 
 Click on the links to see in-depth steps.
 
-- [Creating a QnA Service](1.\ Create\ QnA\ Service.md)
+- [Creating a QnA Service](https://github.com/AUMSA/MSA_AIWorkshop_2021/blob/main/QnA%20Bot%20using%20API/1.%20Create%20QnA%20Service.md)
   > We will learn how to Create a QnA Cognitive Service on the Azure Portal
-- [Creating a Knowledge Base](2.\ Create\ a\ Knowledge\ Base.md)
+- [Creating a Knowledge Base](https://github.com/AUMSA/MSA_AIWorkshop_2021/blob/main/QnA%20Bot%20using%20API/2.%20Create%20a%20Knowledge%20Base.md)
   > Creating the knowledge base for our requirement
-- [Testing the QnA API](3.\ Test\ QnA\ API.md)
+- [Testing the QnA API](https://github.com/AUMSA/MSA_AIWorkshop_2021/blob/main/QnA%20Bot%20using%20API/3.%20Test%20QnA%20API.md)
   > Testing the QnA API using Python
-- [Creating own Application](4.\ Creating\ own\ Application.md)
+- [Creating own Application](https://github.com/AUMSA/MSA_AIWorkshop_2021/blob/main/QnA%20Bot%20using%20API/4.%20Creating%20own%20Application.md)
   > Building a Flask application and a little bit of Web development
-- [Deploying App on Azure](5.\ Deploying\ on\ Azure\ App\ Service.md)
+- [Deploying App on Azure](https://github.com/AUMSA/MSA_AIWorkshop_2021/blob/main/QnA%20Bot%20using%20API/5.%20Deploying%20on%20Azure%20App%20Service.md)
   > Using Azure App Service to host our Flask application
 
 
