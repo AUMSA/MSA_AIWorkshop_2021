@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Bot</title>
+
+    <!-- Bootstrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Importing CSS and JavaScript Files -->
+    <link href="{{url_for('static', filename = 'style.css')}}" rel="stylesheet">
+    <script src="{{url_for('static', filename = 'script.js')}}"></script>
+    <!-- <link href="../static/style.css"> -->
+</head>
+<body>
+    <div class="row">
+        <div class="container chat-box" id="chat">
+            
+            <!-- Chat Content goes here -->
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="container chat-text">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Ask me a question" id="question">
+                <button class="btn btn-primary" type="button" onclick="request_server()">Ask !</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
